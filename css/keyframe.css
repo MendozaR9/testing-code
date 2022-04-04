@@ -1,0 +1,89 @@
+.parent-1{
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+    /*animation: spin 5s linear infinite;*/
+}
+.child-1{
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    animation: left-right 3s ease-in-out forwards infinite alternate;
+
+}
+.holder{
+margin: 200px;
+    background-color: black;
+    border-radius: 7px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    animation: swing 2000ms linear forwards infinite alternate;
+}
+
+#black-box{
+    background-color: black;
+
+    height: 50px;
+    width: 50px;
+}
+.light{
+    display: flex;
+    justify-content: center;
+    /*margin: 200px;*/
+    background-color: rgba(250, 250, 6, 0.57);
+    border-radius: 7px;
+    height: 300px;
+    width: 35px;
+
+}
+
+.parent-1:hover .child-1{
+    animation-play-state: paused;
+
+}
+
+@keyframes left-right {
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateX(100%) translateY(100%);
+        border-radius: 0 50% 0 0;
+    }
+    70%{
+        transform: translateX(100%) ;
+        border-radius: 0 50% 50% 50%;
+    }
+   100%{
+       background-color: lightcoral;
+       transform: translateX(0);
+       border-radius: 50%;
+   }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes swing {
+    0%{
+        transform: rotate(180deg);
+
+    }
+
+    100%{
+        transform: rotate(250deg);
+    }
+}
