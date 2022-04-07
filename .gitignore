@@ -1,0 +1,14 @@
+# MacOS
+.DS_Store
+
+# IntelliJ
+.idea/*
+*.iml
+
+# Compiled output
+*.class
+out/*
+*iml
+DStore
+
+js/keys.js
