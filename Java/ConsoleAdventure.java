@@ -9,7 +9,6 @@ public class ConsoleAdventure {
         String conformation = scanner.next();
         if (conformation.equalsIgnoreCase("y")) {
 
-
             System.out.print("Please Enter You're name: ");
             String playerName = scanner.next();
             int playerHp = 50;
