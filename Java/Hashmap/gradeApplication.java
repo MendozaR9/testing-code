@@ -1,6 +1,7 @@
 package Java.Hashmap;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class gradeApplication {
     public static void main(String[] args) {
@@ -22,9 +23,28 @@ public class gradeApplication {
     }
 
     public static void gradeApp(HashMap student){
-        System.out.println(student);
+        System.out.println(student.keySet());
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome!\n "+
-                "Here are the GitHub Username of our Students:\n");
+                "Here are the GitHub Username of our Students:");
+        for (Object key : student.keySet()){
+            System.out.print("|"+key+"|  ");
+        }
+        System.out.println("\nWhat student would you like to see more information on?");
+        System.out.print("> ");
+        String username = scanner.next();
+        boolean studentExist = false;
+
+        for (Object key : student.keySet()){
+            studentExist = username.equals(key);
+        }
+
+        if (studentExist){
+            System.out.println(username);
+        }else {
+            System.out.println("Sorry, no students found with the username of \""+username+"\".");
+            System.out.println("Would you like to see another student?");
+        }
     }
 
     public static void giveGrades(Students students, int grade1, int grade2, int grade3){
