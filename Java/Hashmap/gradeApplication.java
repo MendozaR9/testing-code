@@ -36,11 +36,18 @@ public class gradeApplication {
         boolean studentExist = false;
 
         for (Object key : student.keySet()){
-            studentExist = username.equals(key);
+            if (username.equals(key)){
+                studentExist = true;
+                break;
+            }
+
         }
 
         if (studentExist){
-            System.out.println(username);
+            Students currentStudent = (Students) student.get(username);
+            System.out.println("Name: "+currentStudent.getName()+
+                    " - Github Username: "+ username +
+                    "\nCurrent Average: "+currentStudent.getGradeAverage());
         }else {
             System.out.println("Sorry, no students found with the username of \""+username+"\".");
             System.out.println("Would you like to see another student?");
