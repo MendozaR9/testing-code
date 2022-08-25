@@ -30,30 +30,47 @@ public class gradeApplication {
         for (Object key : student.keySet()){
             System.out.print("|"+key+"|  ");
         }
-        System.out.println("\nWhat student would you like to see more information on?");
-        System.out.print("> ");
-        String username = scanner.next();
-        boolean studentExist = false;
 
-        for (Object key : student.keySet()){
-            if (username.equals(key)){
-                studentExist = true;
-                break;
-            }
+        choiceStudent(scanner, student );
 
-        }
+    }
+public static void choiceStudent(Scanner scanner, HashMap student){
+    System.out.println("\nWhat student would you like to see more information on?");
+    System.out.print("> ");
+    String username = scanner.next();
 
-        if (studentExist){
-            Students currentStudent = (Students) student.get(username);
-            System.out.println("Name: "+currentStudent.getName()+
-                    " - Github Username: "+ username +
-                    "\nCurrent Average: "+currentStudent.getGradeAverage());
-        }else {
-            System.out.println("Sorry, no students found with the username of \""+username+"\".");
-            System.out.println("Would you like to see another student?");
+    boolean studentExist = false;
+
+    for (Object key : student.keySet()){
+        if (username.equals(key)){
+            studentExist = true;
+            break;
         }
     }
+    if (studentExist){
+        Students currentStudent = (Students) student.get(username);
+        System.out.println("Name: "+currentStudent.getName()+
+                " - Github Username: "+ username +
+                "\nCurrent Average: "+currentStudent.getGradeAverage());
+    }else {
+        System.out.println("Sorry, no students found with the username of \""+username+"\".");
+    }
+    yesNo(scanner, student);
+}
 
+
+public static void yesNo(Scanner scanner, HashMap student){
+
+    System.out.println("Would you like to see another student? ");
+    System.out.print("> ");
+    String yesNo = scanner.next();
+    if (yesNo.toLowerCase().equals("yes")){
+        choiceStudent(scanner, student );
+    }else {
+        System.out.println("Goodbye");
+        System.exit(0);
+    }
+}
     public static void giveGrades(Students students, int grade1, int grade2, int grade3){
         students.addGrades(grade1);
         students.addGrades(grade2);
