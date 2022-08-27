@@ -1,6 +1,7 @@
-
+var num;
 $(document).ready(function (){
     $(".btn").click(function (){
-        console.log($(this).data('num'))
+        num = $(this).data('num')
+        console.log(num)
     })
 })
