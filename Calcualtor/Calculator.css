@@ -5,6 +5,14 @@
     border-radius: 20px;
     background-color: #d2d2d2;
 }
+#result{
+    height: 50px;
+    width: 200px;
+    text-align: right;
+    line-height: 80px;
+    border: 7px dot-dash black;
+    background-color: white;
+}
 .btn{
     text-align: center;
     line-height: 30px;
