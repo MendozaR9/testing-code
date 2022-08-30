@@ -39,6 +39,14 @@ $(document).ready(function (){
         }else if (equation ==="subtract"){
             result = num - num2;
             $("#result").html(result)
+        }else if (equation ==="multiply"){
+            result = num * num2
+            $("#result").html(result)
+
+        }else if (equation === "division"){
+            result = num / num2
+            $("#result").html(result)
+
         }
 
     })
