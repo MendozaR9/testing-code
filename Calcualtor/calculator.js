@@ -19,13 +19,15 @@ $(document).ready(function (){
 
 
     $(".btn").click(function (){
-        $(this).css("background-color", "red")
+        // $(this).css("background-color", "red")
+        let numBtn =$(this).data('num')
+
         if (math===false){
-            num = $(this).data('num')
+            num =numBtn
             console.log("num 1 = "+num)
             $("#result").html(num)
         }else {
-            num2 = $(this).data('num')
+            num2 = numBtn
             console.log("num 2 = "+num2)
             $("#result").html(num2)
         }
