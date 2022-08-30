@@ -1,5 +1,5 @@
-var num;
-var num2 = 1
+var num =0
+var num2 = 0
 var math = false
 var equation;
 
@@ -8,6 +8,13 @@ $(document).ready(function (){
         math = true;
         equation =$(this).data('equation')
         console.log(equation)
+    })
+
+    $("#clear").click(function (){
+        num = 0
+        num2 = 0
+        math =false;
+        $("#result").html(num)
     })
 
 
@@ -26,8 +33,11 @@ $(document).ready(function (){
 
     $("#equal").click(function (){
         let result;
-        if (equation =="add"){
+        if (equation ==="add"){
             result= num+ num2;
+            $("#result").html(result)
+        }else if (equation ==="subtract"){
+            result = num - num2;
             $("#result").html(result)
         }
 
