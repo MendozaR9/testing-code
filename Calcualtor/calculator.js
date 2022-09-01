@@ -1,11 +1,13 @@
 var num =0
 var num2 = 0
 var math = false
+var firstNum= false
 var equation;
 
 $(document).ready(function (){
     $(".equation").click(function (){
         math = true;
+        firstNum = false;
         equation =$(this).data('equation')
         console.log(equation)
     })
@@ -14,6 +16,7 @@ $(document).ready(function (){
         num = 0
         num2 = 0
         math =false;
+        firstNum = false;
         $("#result").html(num)
     })
 
@@ -23,11 +26,28 @@ $(document).ready(function (){
         let numBtn =$(this).data('num')
 
         if (math===false){
-            num =numBtn
+
+            if (firstNum === false){
+                num = numBtn;
+                firstNum = true;
+            }else {
+                num += numBtn.toString();
+                num = parseInt(num)
+            }
             console.log("num 1 = "+num)
             $("#result").html(num)
-        }else {
-            num2 = numBtn
+        }
+
+        else {
+            console.log(firstNum)
+            if (firstNum === false){
+                num2 = numBtn
+                firstNum = true;
+            }
+            else {
+                num2 += numBtn.toString()
+                num2 = parseInt(num2)
+            }
             console.log("num 2 = "+num2)
             $("#result").html(num2)
         }
