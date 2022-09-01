@@ -2,35 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Calculator</title>
     <script src="../js/jquery.js"></script>
     <script src="calculator.js"></script>
     <link rel="stylesheet" href="Calculator.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
 <body>
 <div id="cal">
 <div id="numbers">
    <div id="result">0</div>
-    <div class="sign-con">
-    <div id="clear" class="mathBtn">C</div>
-    <div id="equal" class="mathBtn">=</div>
-    <div id="divide" class="mathBtn equation" data-equation="division">÷</div>
-    <div id="multiply" class="mathBtn equation" data-equation="multiply">X</div>
-    <div id="subtract" class="mathBtn equation" data-equation="subtract">-</div>
-    <div id="add" class="mathBtn equation" data-equation="add">+</div>
-    </div>
-    <div class="num-con">
-    <div class="btn" data-num="9">9</div>
-    <div class="btn" data-num="8">8</div>
-    <div class="btn" data-num="7">7</div>
-    <div class="btn" data-num="6">6</div>
-    <div class="btn" data-num="5">5</div>
-    <div class="btn" data-num="4">4</div>
-    <div class="btn" data-num="3">3</div>
-    <div class="btn" data-num="2">2</div>
-    <div class="btn" data-num="1">1</div>
-   <div class="btn" data-num="0" >0</div>
+
+    <div class="num-col ">
+        <div class="num-row row">
+            <div id="clear" class="mathBtn">C</div>
+            <div id="divide" class="mathBtn equation" data-equation="division">÷</div>
+        </div>
+        <div class="num-row row ">
+        <div class="btn" data-num="7">7</div>
+        <div class="btn" data-num="8">8</div>
+        <div class="btn" data-num="9">9</div>
+        <div id="multiply" class="mathBtn equation" data-equation="multiply">X</div>
+        </div>
+        <div class="num-row row">
+            <div class="btn" data-num="4">4</div>
+            <div class="btn" data-num="5">5</div>
+            <div class="btn" data-num="6">6</div>
+            <div id="subtract" class="mathBtn equation" data-equation="subtract">-</div>
+        </div>
+        <div class="num-row row">
+            <div class="btn" data-num="1">1</div>
+            <div class="btn" data-num="2">2</div>
+            <div class="btn" data-num="3">3</div>
+            <div id="add" class="mathBtn equation" data-equation="add">+</div>
+        </div>
+        <div class="num-row row">
+            <div class="mathBtn">-</div>
+            <div class="btn" data-num="0" >0</div>
+            <div class="mathBtn">.</div>
+            <div id="equal" class="mathBtn">=</div>
+        </div>
+
     </div>
 </div>
 </div>
