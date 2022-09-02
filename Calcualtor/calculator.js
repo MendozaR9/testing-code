@@ -26,7 +26,6 @@ $(document).ready(function (){
         let numBtn =$(this).data('num')
 
         if (math===false){
-
             if (firstNum === false){
                 num = numBtn;
                 firstNum = true;
@@ -72,6 +71,14 @@ $(document).ready(function (){
         }
 
     })
-
-
+//todo figure out why when the decimal is clicked and  number is clicked it does not save the dot.
+    $("#dot").click(function (){
+        if (math === false && firstNum===true){
+            num =num.toString()+"."
+            console.log(num)
+            $("#result").html(num)
+        }else {
+            num+="."
+        }
+    })
 })
