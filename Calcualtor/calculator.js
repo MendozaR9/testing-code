@@ -25,13 +25,18 @@ $(document).ready(function (){
         // $(this).css("background-color", "red")
         let numBtn =$(this).data('num')
 
+
         if (math===false){
+
             if (firstNum === false){
                 num = numBtn;
                 firstNum = true;
             }else {
+
                 num += numBtn.toString();
-                num = parseInt(num)
+               //Parse int will convert a string to a whole number and not a decimal
+                num = parseFloat(num)
+
             }
             console.log("num 1 = "+num)
             $("#result").html(num)
@@ -45,7 +50,7 @@ $(document).ready(function (){
             }
             else {
                 num2 += numBtn.toString()
-                num2 = parseInt(num2)
+                num2 = parseFloat(num2)
             }
             console.log("num 2 = "+num2)
             $("#result").html(num2)
@@ -75,10 +80,12 @@ $(document).ready(function (){
     $("#dot").click(function (){
         if (math === false && firstNum===true){
             num =num.toString()+"."
-            console.log(num)
             $("#result").html(num)
-        }else {
-            num+="."
+        }else if (math === true && firstNum === true) {
+            num2 = num2.toString()+"."
+            $("#result").html(num2)
         }
+
+
     })
 })
