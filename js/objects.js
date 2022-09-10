@@ -46,11 +46,22 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    for (let i = 0; i < shoppers.length; i++) {
+        let discount = .12
+        let finalAmount;
+        if (shoppers[i].amount > 200){
+            finalAmount = shoppers[i].amount - (shoppers[i].amount * discount)
+        }else {
+            finalAmount = shoppers[i].amount
+        }
+        console.log(shoppers[i].name+ " spent $"+shoppers[i].amount + " after discount if eligible it is now $"+ finalAmount)
+        console.log(finalAmount)
+    }
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
