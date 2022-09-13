@@ -76,6 +76,16 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+
+    let books = [
+        {title: "The Salmon of Doubt" , author:  {firstName: "Douglas", lastName:"Adams"}},
+        {title: "Walkaway", author: {firstName: "Cory", lastName: "Adams"}},
+        {title: "A Brief History of Time", author: {firstName: "Stephen", lastName: "Hawking"}},
+        {title: "Test book", author: {firstName: "James", lastName: "Brown"}}
+    ]
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[0].author.lastName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -100,6 +110,15 @@
      *      ---
      *      ...
      */
+
+    for (let i = 0 ; i < books.length; i++){
+
+      let bookNum = 1;
+      console.log("Books #"+ bookNum)
+      console.log("Title: "+books[i].title)
+      console.log("Author: "+ books[i].author.firstName +books[i].author.lastName)
+        console.log("---")
+  }
 
     /**
      * Bonus:
