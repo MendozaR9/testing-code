@@ -1,0 +1,16 @@
+.rps   {
+    border: 1px black solid;
+    border-radius: 1em;
+    margin: 5px;
+    width: 120px;
+    height: 200px;
+}
+body{
+    background-color: #d2d2d2;
+}
+#container{
+    text-align: center;
+}
+.text{
+    font-size:2em ;
+}

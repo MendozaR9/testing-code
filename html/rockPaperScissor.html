@@ -5,23 +5,17 @@
     <title>RPS</title>
     <script src="../js/jquery.js"></script>
     <script src="../js/rockPaperScissor.js"></script>
-<STYLE>
-    .rps   {
-        border: 1px black solid;
-        border-radius: 1em;
-       margin: 5px;
-        width: 120px;
-        height: 200px;
-    }
-</STYLE>
+    <link rel="stylesheet" href="../css/rockPaperScissors.css">
 </head>
 <body>
+<div id="container">
 <div>
 <img src="../img/rock-gester.jpg" class="rps" data-choice="rock">
 <img src="../img/paper-gester.jpg" class="rps" data-choice="paper">
 <img src="../img/scissors-gesture.jpg" class="rps" data-choice="scissor">
 </div>
-<div id="cp-choice"></div>
-<div id ="winLose"></div>
+<div id="cp-choice" class="text"></div>
+<div id ="winLose" class="text"></div>
+</div>
 </body>
 </html>
